@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+	<!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+	<title>Love4Ever</title>
+
+
+
+	<style>
+		html,
+		body,
+		#root {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+		}
+		:root {
+		    --fadeUp: 100px;
+			  --fallDown: -200px;
+				--delay: 50ms;
+				--duration: 5s;
+		}
+	  .demo2-outer {
+	    height: 100%;
+	    width: 100%;
+	    position: absolute;
+	    background-color: #EEE;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    display: -webkit-flex;
+	    -webkit-justify-content: center;
+	    -webkit-align-items: center;
+	  }
+	  .demo2 {
+	    width: 1000px;
+	    height: 600px;
+	  }
+	  .demo2-ball-0 {
+	    position: absolute;
+	    border: 1px solid black;
+	    border-radius: 99px;
+	    width: 10px;
+	    height: 10px;
+			animation: flash linear 1.5s infinite;
+	  }
+		.demo2-ball-1 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 11px;
+			height: 11px;
+			animation: flash linear 2s infinite;
+		}
+		.demo2-ball-2 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 12px;
+			height: 12px;
+			animation: flash linear 2.5s infinite;
+		}
+		.demo2-ball-3 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 13px;
+			height: 13px;
+			animation: flash linear 3s infinite;
+		}
+		.demo2-ball-4 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 14px;
+			height: 14px;
+			animation: flash linear 3.5s infinite;
+		}
+		.demo2-ball-5 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 15px;
+			height: 15px;
+			animation: flash linear 4s infinite;
+		}
+		.demo2-ball-6 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 16px;
+			height: 16px;
+			animation: flash linear 4.5s infinite;
+		}
+		.demo2-ball-7 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 17px;
+			height: 17px;
+			animation: flash linear 5s infinite;
+		}
+		.demo2-ball-8 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 18px;
+			height: 18px;
+			animation: flash linear 5.5s infinite;
+		}
+		.demo2-ball-9 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 19px;
+			height: 19px;
+			animation: flash linear 6s infinite;
+		}
+		.demo2-ball-10 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 20px;
+			height: 20px;
+			animation: flash linear 6.5s infinite;
+		}
+		.demo2-ball-11 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 11px;
+			height: 11px;
+			animation: flash linear 6 infinite;
+		}
+		.demo2-ball-12 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 12px;
+			height: 12px;
+			animation: flash linear 5.5s infinite;
+		}
+		.demo2-ball-13 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 13px;
+			height: 13px;
+			animation: flash linear 5s infinite;
+		}
+		.demo2-ball-14 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 14px;
+			height: 14px;
+			animation: flash linear 4.5s infinite;
+		}
+		.demo2-ball-15 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 15px;
+			height: 15px;
+			animation: flash linear 4s infinite;
+		}
+		.demo2-ball-16 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 16px;
+			height: 16px;
+			animation: flash linear 3.5s infinite;
+		}
+		.demo2-ball-17 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 17px;
+			height: 17px;
+			animation: flash linear 3s infinite;
+		}
+		.demo2-ball-18 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 18px;
+			height: 18px;
+			animation: flash linear 2.5s infinite;
+		}
+		.demo2-ball-19 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 19px;
+			height: 19px;
+			animation: flash linear 2s infinite;
+		}
+		.demo2-ball-20 {
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 99px;
+			width: 20px;
+			height: 20px;
+			animation: flash linear 1.5s infinite;
+		}
+
+		.App-logo {
+		  animation: App-logo-spin infinite 5s linear;
+			position: absolute;
+			top: 0;
+			left: 0;
+			filter: brightness(0) invert(1);
+		}
+
+		.ui.page.modals.transition.visible {
+				display: flex !important;
+		}
+
+
+		.text-container {
+			  margin-top: -20px;
+		    color: white;
+		    font-family: SimHei, STXihei, monospace;
+		    letter-spacing: 4px;
+		    font-size: 40px;
+		    -webkit-font-smoothing: antialiased;
+		    text-align: center;
+		}
+
+		.text-container-sub {
+				margin-top: 30px;
+				color: white;
+				font-family:  SimHei, STXihei, monospace;
+				letter-spacing: 3.5px;
+				font-size: 22px;
+				-webkit-font-smoothing: antialiased;
+				text-align: center;
+		}
+
+		.text-container-mobile {
+				color: white;
+				font-family:  SimHei, STXihei, monospace;
+				letter-spacing: 4px;
+				font-size: 20px;
+				-webkit-font-smoothing: antialiased;
+				text-align: center;
+		}
+
+		.text-container-sub-mobile {
+				color: white;
+				margin-top: 20px;
+				font-family:  SimHei, STXihei, monospace;
+				letter-spacing: 3px;
+				font-size: 12px;
+				-webkit-font-smoothing: antialiased;
+				text-align: center;
+		}
+
+		.reg-text {
+		    transform: translateY(100px);
+		    opacity: 0;
+		    transition: transform 3s ease-out, opacity 6s ease;
+		}
+
+		.flash-heart {
+			animation:heart-flash 3s infinite;
+			-webkit-animation:heart-flash 3s infinite; /*Safari and Chrome*/
+		}
+
+		@keyframes heart-flash
+		{
+			from {opacity:1;}
+			to {opacity:0;}
+		}
+
+		@-webkit-keyframes heart-flash /*Safari and Chrome*/
+		{
+			from {opacity:1;}
+			to {opacity:0;}
+		}
+
+		.loaded {
+		     opacity: 1;
+		     transform: translateY(0);
+		     filter: blur(0);
+		}
+
+	</style>
+</head>
+
+<body>
+	<noscript>
+		You need to enable JavaScript to run this app.
+	</noscript>
+
+	<div id="root"></div>
+	<!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>
